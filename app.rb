@@ -36,9 +36,16 @@ class App < Sinatra::Base
     if @op = "add"
       sum = @n1 + @n2
       "#{sum}"
+    elsif @op = "subtract"
+      difference = @n1 - @n2
+      "#{difference}"
+    elsif @op = "multiply"
+      product = @n1*@n2
+      "#{product}"
+    elsif @op = "divide"
+      quotient = @n1 / @n2
+      "#{quotient}"
     end
-
-
   end
 
 
