@@ -34,7 +34,8 @@ class App < Sinatra::Base
     @n1 = params[:number1].to_i
     @n2 = params[:number2].to_i
     if @op = "add"
-      "@n1 + @n2"
+      sum = @n1 + @n2
+      "#{sum}"
     end
 
 
