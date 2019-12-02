@@ -34,20 +34,14 @@ class App < Sinatra::Base
     @n1 = params[:number1].to_i
     @n2 = params[:number2].to_i
     if @op = "add"
-      sum = @n1 + @n2
-      "#{sum}"
+      answer = @n1 + @n2
+    elsif @op = "subtract"
+      answer = @n1 - @n2
+    elsif @op = "multiply"
+      answer = @n1*@n2
+    elsif @op = "divide"
+      answer = @n1 / @n2
     end
-    if @op = "subtract"
-      difference = @n1 - @n2
-      "#{difference}"
-    end
-    if @op = "multiply"
-      product = @n1*@n2
-      "#{product}"
-    end
-    if @op = "divide"
-      quotient = @n1 / @n2
-      "#{quotient}"
-    end
+    "#{answer}"
   end
 end
