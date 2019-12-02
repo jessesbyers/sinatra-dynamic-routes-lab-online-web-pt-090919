@@ -14,13 +14,12 @@ class App < Sinatra::Base
 
   # Create a dynamic route at get '/say/:number/:phrase' that accepts a number and a phrase
   #  and returns that phrase in a single string the number of times given.
-
   get "/say/:number/:phrase" do
     @num = params[:number]
     @phrase = params[:phrase]
-    ()@num.to_i).times do
-      "#{@phrase}"
-    end
+    str = ""
+    (1..@num.to_i).each {str += @phrase}
+      # "#{@phrase}"
   end
 
 end
