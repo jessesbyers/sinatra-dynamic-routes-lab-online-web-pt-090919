@@ -35,7 +35,7 @@ class App < Sinatra::Base
     @n2 = params[:number2]
     if @op = "add"
       "#{@n1.to_i} + #{@n2.to_i}"
-    
+
 
   end
 
