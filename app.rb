@@ -47,6 +47,4 @@ class App < Sinatra::Base
       "#{quotient}"
     end
   end
-
-
 end
