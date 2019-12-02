@@ -15,8 +15,8 @@ class App < Sinatra::Base
   # and your return value for the route should also be a string (use .to_i and .to_s).
 
   get "/square/:number" do
-    @num = params[:number].to_i
-    "#{@num**2.to_s}"
+    @num = params[:number]
+    "#{(@num.to_i**2).to_s}"
 
   end
 
