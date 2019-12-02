@@ -19,6 +19,7 @@ class App < Sinatra::Base
     @phrase = params[:phrase]
     str = ""
     (1..@num.to_i).each {str += @phrase}
+    "#{str}"
       # "#{@phrase}"
   end
 
