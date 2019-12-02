@@ -33,13 +33,13 @@ class App < Sinatra::Base
     @op = params[:operation]
     @n1 = params[:number1].to_i
     @n2 = params[:number2].to_i
-    if @op = "add"
+    if @op == "add"
       answer = @n1 + @n2
-    elsif @op = "subtract"
+    elsif @op == "subtract"
       answer = @n1 - @n2
-    elsif @op = "multiply"
+    elsif @op == "multiply"
       answer = @n1*@n2
-    elsif @op = "divide"
+    elsif @op == "divide"
       answer = @n1 / @n2
     end
     "#{answer}"
